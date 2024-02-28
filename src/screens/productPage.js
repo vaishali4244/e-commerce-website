@@ -33,7 +33,9 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
                     })
                     setData(filteredData);
                 }
-            }).catch(err => console.log("error", err));
+            }).catch(err => {
+                // console.log("error", err)
+        });
     }, [search])
 
 
@@ -42,7 +44,7 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
         // Calculate the total amount by adding the price of the selected item
         const totalAmount = parseFloat(price) + parseFloat(item.price);
         setPrice(totalAmount.toFixed(0));
-        // console.log('Total Sum:', totalAmount);
+        
         // Increment the product count every time the "Add to cart" button is clicked
         setProductCount((prevCount) => prevCount + 1);
     };
@@ -138,7 +140,7 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
                                     <LazyLoadImage
                                         src={require("../assets/images/star.png")}
                                         alt="" /> </span>
-                                <h3>{item?.title}</h3>
+                                <h5>{item?.title}</h5>
 
                                 <p className="product-price">&#8377;{item?.price}<span>({item?.discountPercentage
                                 }% off)</span></p>

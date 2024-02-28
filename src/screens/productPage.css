@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffde21;
   margin-bottom: 2vh;
   z-index: 10;
 }
@@ -54,6 +54,8 @@
 .cart-amount {
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
+  position: relative;
+  top: 0.5vh;
 }
 
 .content-section {
@@ -75,8 +77,10 @@
   width: 5vw;
   min-width: 50px;
   font-size: 1rem;
-  padding: 0.3% 1%;
-  border-radius: 8px;
+  padding: 3% 1%;
+  padding-left: 10%;
+  border-radius: 5px;
+ 
 }
 
 .price-section label {
@@ -101,7 +105,7 @@
 }
 
 .product {
-  width: 93vw;
+  width: 98.75vw;
   padding: 2rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -109,6 +113,7 @@
   padding-left: 3rem;
   border-top: 1px solid #15053d;
   margin-top: 3vh;
+  background: #d5d4d7;
 }
 
 .product-box {
@@ -121,10 +126,11 @@
   align-self: center;
   padding: 0;
   margin: 0;
+
 }
 
 .product-box:hover {
-  box-shadow: 0px 0px 20px 10px #5128b5;
+  box-shadow: 0px 0px 5px 5px #806faa;
 }
 
 .product-img {
@@ -133,6 +139,7 @@
   border-radius: 9px;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
 
 .rating {
@@ -160,7 +167,6 @@
   font-weight: 500;
   font-size: 1.1rem;
   font-weight: 500;
-  padding: 0;
   margin: 0.15rem;
 }
 
@@ -168,6 +174,7 @@
   font-size: 0.85rem;
   font-weight: 300;
   color: rgb(205, 91, 21);
+  padding: 0 0.3vw;
 }
 
 .product-box button {

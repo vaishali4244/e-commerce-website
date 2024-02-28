@@ -1,0 +1,10 @@
+.product-detail{
+    box-sizing: border-box;
+    margin: 10vh ;
+}
+
+.backBtn{
+    height: 15px;
+    margin: 15vh 5vw;
+    margin-bottom: 5vw;
+}

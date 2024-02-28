@@ -33,6 +33,7 @@ const Screen = () => {
                 setSelectedItem={setSelectedItem}
                 price={price}
                 setPrice={setPrice}
+                productCount={productCount}
                 setProductCount={setProductCount} />} />
             {/* : null} */}
             {/* <Route path='/' element={<Login setToken={setToken} />} /> */}

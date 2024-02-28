@@ -1,7 +1,7 @@
 .carousel-img{
 height: 90vh;
 width: 100vw;
-filter: brightness(70%);
+filter: brightness(60%);
 overflow-y: hidden;
 }
 
@@ -10,4 +10,13 @@ overflow-y: hidden;
   bottom: 45vh;
   left: 46vw;
   z-index: 2;
+  width: 10rem;
+  height: 2.1rem;
+  border: 2px solid #15053d;
+  border-radius: 8px;
+  background-color: #15053d;
+  color: #ffde21;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: underline;
 }

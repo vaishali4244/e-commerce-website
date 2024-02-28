@@ -27,7 +27,7 @@ const LandingPage = ({ setBtnName }) => {
           </div>
         </div>
       </div>
-
+        
       <button className='btn-shop' onClick={() => handleShopping()}>Shop Now</button>
     </>
   )
