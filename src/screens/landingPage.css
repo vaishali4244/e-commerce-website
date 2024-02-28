@@ -1,0 +1,13 @@
+.carousel-img{
+height: 90vh;
+width: 100vw;
+filter: brightness(70%);
+overflow-y: hidden;
+}
+
+.btn-shop{
+  position: absolute;
+  bottom: 45vh;
+  left: 46vw;
+  z-index: 2;
+}
