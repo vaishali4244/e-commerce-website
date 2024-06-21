@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-// import Login from "./login";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./login";
 import { useState } from "react";
 import LandingPage from "./landingPage";
 import ProductPage from "./productPage";
@@ -26,6 +26,7 @@ const Screen = () => {
                 setPrice={setPrice}
                 productCount={productCount}
                 setProductCount={setProductCount} />} />
+            {/* : null} */}
 
             <Route path='/products/detail' element={<CardDetails
                 setData={setData}
@@ -35,10 +36,11 @@ const Screen = () => {
                 setPrice={setPrice}
                 productCount={productCount}
                 setProductCount={setProductCount} />} />
-            {/* : null} */}
-            {/* <Route path='/' element={<Login setToken={setToken} />} /> */}
             <Route path='/' element={<LandingPage />} />
-
+            <Route path='/login' element={<Login 
+            // setToken={setToken} 
+            />} />
+            <Route path="*" element={<Navigate to="/products" />} />
         </Routes>
     )
 }

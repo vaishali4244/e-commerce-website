@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './login.css';
 
 const Login = (props) => {
@@ -23,8 +23,8 @@ const Login = (props) => {
                 if (data?.message) {
                     alert(data?.message)
                 } else {
-                    props.setToken(data?.token);
-                    navigate(data?.token ? "homepage" : "/")
+                    // props.setToken(data?.token);
+                    // navigate(data?.token ? "products" : "/")
                 }
             })
     }
@@ -39,8 +39,8 @@ const Login = (props) => {
         })
             .then(res => res.json())
             .then(data => {
-                    props.setToken(data?.token);
-                    navigate(data?.token ? "homepage" : "/")
+                // props.setToken(data?.token);
+                navigate(data?.token ? "products" : "/")
             })
     }
 
@@ -60,9 +60,11 @@ const Login = (props) => {
                 <br />
                 <button onClick={loginFunc}>Submit</button>
             </div>
-<div>
-   <button className="recruit-btn" onClick={recruitFunc}>Recruiter Click Here</button> 
-</div>
+            <div>
+            <Link to="/products">
+                <button className="recruit-btn" onClick={recruitFunc}>Recruiter Click Here</button>
+            </Link>
+            </div>
         </div>
 
     )

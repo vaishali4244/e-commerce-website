@@ -38,7 +38,6 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
         });
     }, [search])
 
-
     const handleAddToCart = (item) => {
 
         // Calculate the total amount by adding the price of the selected item
@@ -81,15 +80,20 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
         setIsLoading(false);
     }
 
+    const LoginPage = () => {
+        navigate("/login")
+      }
+
     return (
         <div>
             <nav className="navbar">
                 <h2>Create your Shopping List now !</h2>
                 <div className="cart-box">
-                    <div className="cart-img">
+                    <div className="cart-img" onClick={()=>LoginPage()}>
+                    
                         <img src={require("../assets/images/shoppingCart.png")} alt="" className="cart-icon" />
                     </div>
-                    <p className="cart-count" style={{}}>{productCount}</p>
+                    <p className="cart-count">{productCount}</p>
                     <p className="cart-amount">=  <span>&#8377;</span>{price}</p>
                 </div>
             </nav>
