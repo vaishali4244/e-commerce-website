@@ -14,7 +14,7 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
     const [maxPrice, setMaxPrice] = useState(""); // new state for maximum price filter
     const [resetData, setResetData] = useState([]);
     const [isFilterApplied, setIsFilterApplied] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    const [setIsLoading] = useState(false);
 
     const navigate = useNavigate()
 
@@ -34,9 +34,9 @@ const ProductPage = ({ data, setData, setSelectedItem, price, setPrice, productC
                     setData(filteredData);
                 }
             }).catch(err => {
-                // console.log("error", err)
+                console.log("error", err)
         });
-    }, [search])
+    }, [search,setData])
 
     const handleAddToCart = (item) => {
 
